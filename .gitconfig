@@ -1,0 +1,26 @@
+[user]
+  name = Junior Ales
+  email = edilson.ales.jr@gmail.com
+[color]
+  ui = auto
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[apply]
+  whitespace = fix
+[core]
+  excludesfile = /Users/ejunior/.gitignore_global
+  editor = vim
+[alias]
+  a = !git add -A . && git status
+  br = branch
+  cm = commit -m
+  co = checkout
+  pr = pull --rebase
+  s = status
+  spr = !git stash && git pr && git stash pop
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --branches
+[push]
+  default = tracking
+[merge]
+  stat = true
