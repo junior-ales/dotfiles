@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/vim-auto-save'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bronson/vim-visual-star-search'
 
