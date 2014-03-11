@@ -6,9 +6,10 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/vim-auto-save'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bronson/vim-visual-star-search'
+Bundle 'xuhdev/SingleCompile'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-static'
 
 runtime macros/matchit.vim
 
@@ -31,6 +32,7 @@ set history=200
 set hidden
 set pastetoggle=<f5>
 set smartcase
+set spell
 
 "Visual star search
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
@@ -42,3 +44,7 @@ function! s:VSetSearch()
   let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
+
+"SCCompile Mapping
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
