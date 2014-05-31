@@ -9,7 +9,9 @@ Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'xuhdev/SingleCompile'
 Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
+Bundle 'kien/ctrlp.vim'
 
 runtime macros/matchit.vim
 
