@@ -5,9 +5,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'xuhdev/SingleCompile'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
@@ -24,7 +23,7 @@ colorscheme solarized
 "Personal config
 set hlsearch
 set incsearch
-set number
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -47,6 +46,6 @@ function! s:VSetSearch()
   let @s = temp
 endfunction
 
-"SCCompile Mapping
-nmap <F9> :SCCompile<cr>
-nmap <F10> :SCCompileRun<cr>
+"CtrlP custom search for git projects
+"TODO check if it's a git project before setting g:ctrlp_user_command
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
