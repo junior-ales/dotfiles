@@ -1,11 +1,7 @@
-
-. /usr/local/etc/bash_completion.d/git-completion.bash
-
-source ~/.profile
-
-export PATH=/usr/local/bin:$PATH:$HOME/bin
-
+# aliases
 alias ls='ls -G'
 alias lt='tree -C'
 alias ll='ls -l'
 alias la='ls -la'
+
+export PATH=/usr/local/bin:/usr/bin/ruby:$PATH:$HOME/bin
