@@ -6,6 +6,9 @@ alias la='ll -a'
 alias grep='grep --color=auto'
 alias ip="system_profiler SPNetworkDataType | grep 'IPv4 Addresses'"
 
+# Loading personal functions
+source ./scripts/customFunctions.bash
+
 export PATH=/usr/local/bin:/usr/bin/ruby:$PATH:$HOME/bin
 
 # Custom command prompt line
