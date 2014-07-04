@@ -11,6 +11,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'kien/ctrlp.vim'
+Bundle 'rodjek/vim-puppet'
 
 runtime macros/matchit.vim
 

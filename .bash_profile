@@ -14,5 +14,8 @@ export PATH=/usr/local/bin:/usr/bin/ruby:$PATH:$HOME/bin
 # Custom command prompt line
 PS1='\n\[\e[0;37m\]\u\[\e[0m\]@\h: \[\e[0;31m\]\w\n\[\e[0m\] -> '
 
+# Boxen config
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
 # Terminal start up screen (requires `brew install archey`)
 archey -c

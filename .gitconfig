@@ -9,7 +9,7 @@
 [apply]
   whitespace = fix
 [core]
-  excludesfile = /Users/ejunior/.gitignore_global
+  excludesfile = /opt/boxen/config/git/gitignore
   editor = vim
 [alias]
   a = !git add -A . && git status
@@ -25,3 +25,9 @@
   default = tracking
 [merge]
   stat = true
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
