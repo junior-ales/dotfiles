@@ -1,21 +1,23 @@
-set nocompatible 
-filetype off 
+set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rodjek/vim-puppet'
-
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rodjek/vim-puppet'
+Plugin 'bling/vim-airline'
+"Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
 
-filetype plugin indent on 
+call vundle#end()
+filetype plugin indent on
 
 syntax enable
 set background=dark
