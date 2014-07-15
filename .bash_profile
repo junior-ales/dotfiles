@@ -10,7 +10,7 @@ export PATH=/usr/local/bin:/usr/bin/ruby:$PATH:$HOME/bin
 
 # Loading personal functions
 source $HOME/bin/customFunctions.bash
-
+source $HOME/bin/privateFunctions.bash
 # Custom command prompt line
 PS1='\n\[\e[0;37m\]\u\[\e[0m\]@\h: \[\e[0;31m\]\w\n\[\e[0m\] -> '
 
