@@ -19,9 +19,12 @@ runtime macros/matchit.vim
 call vundle#end()
 filetype plugin indent on
 
-syntax enable
-set background=dark
-colorscheme solarized
+"Only apply the following settings if soloarized theme is present
+if isdirectory($HOME."/.vim/bundle/vim-colors-solarized")
+  syntax enable
+  set background=dark
+  colorscheme solarized
+endif
 
 "Personal config
 set hlsearch
