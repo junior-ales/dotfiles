@@ -42,6 +42,14 @@ set pastetoggle=<f5>
 set smartcase
 set spell
 
+"Personal Mapping
+nmap <Left> :bprevious<CR>
+nmap <Right> :bnext<CR>
+nmap <Up> :bfirst<CR>
+nmap <Down> :blast<CR>
+"NERDTree config
+map <f9> :NERDTreeToggle<CR>
+
 "Visual star search
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
@@ -60,6 +68,3 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 "Vim Airline config
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-
-"NERDTree config
-map <f9> :NERDTreeToggle<CR>
