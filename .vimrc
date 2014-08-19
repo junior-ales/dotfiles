@@ -21,9 +21,11 @@ filetype plugin indent on
 
 "Only apply the following settings if soloarized theme is present
 if isdirectory($HOME."/.vim/bundle/vim-colors-solarized")
+  let g:solarized_termtrans = 1
+
   syntax enable
-  set background=dark
   colorscheme solarized
+  set background=dark
 endif
 
 "Personal config
