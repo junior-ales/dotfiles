@@ -3,7 +3,7 @@
 
 # Stands for "open project"
 function op() {
-  projectDir="/Users/juniorales/Project"
+  projectDir="$HOME/Project"
   dir="$projectDir/$1"
   redTxt='\e[0;31m'
   clearColor='\e[0m'
