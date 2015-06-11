@@ -11,7 +11,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'tpope/vim-classpath'
 "Plugin 'guns/vim-clojure-static'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'rodjek/vim-puppet'
+Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 
