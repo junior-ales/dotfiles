@@ -48,6 +48,7 @@ set hidden
 set pastetoggle=<f5>
 set smartcase
 set spell
+set timeoutlen=1000 ttimeoutlen=0
 
 "Personal Mapping
 nmap <Left> :bprevious<CR>
