@@ -15,6 +15,8 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'terryma/vim-expand-region'
+Plugin 'sjl/gundo.vim'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -52,8 +54,16 @@ nmap <Left> :bprevious<CR>
 nmap <Right> :bnext<CR>
 nmap <Up> :bfirst<CR>
 nmap <Down> :blast<CR>
+
 "NERDTree config
 map <f9> :NERDTreeToggle<CR>
+
+"GUndo.vim config
+nnoremap <F4> :GundoToggle<CR>
+
+"Vim expand region remapping
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 "Visual star search
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
