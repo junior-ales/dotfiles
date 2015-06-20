@@ -17,6 +17,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-fugitive'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -65,6 +66,9 @@ nnoremap <F4> :GundoToggle<CR>
 "Vim expand region remapping
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+"Map fugitive command
+cmap git Git
 
 "Visual star search
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
