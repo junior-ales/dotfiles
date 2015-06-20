@@ -14,6 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
