@@ -18,7 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -102,8 +102,6 @@ let g:bufferline_echo=0
 let g:bufferline_rotate = 1
 let g:bufferline_fixed_index = -1 "always last
 
-"Syntastic config
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+"Ctrl-P config
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
