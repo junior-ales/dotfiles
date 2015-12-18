@@ -19,6 +19,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mxw/vim-jsx'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -54,8 +55,9 @@ set history=200
 set pastetoggle=<f5>
 set hidden
 set smartcase
-set spell
+"set spell
 set timeoutlen=1000 ttimeoutlen=0
+set nowrap
 let &t_SI = "\<Esc>]50;CursorShape=1\x7" " use bar for cursor in insert mode
 let &t_EI = "\<Esc>]50;CursorShape=0\x7" "
 
