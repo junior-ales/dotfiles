@@ -12,9 +12,16 @@ export PATH=/bin:/usr/local/bin:/usr/bin/ruby:$PATH:$JAVA_HOME:$HOME/bin
 
 # Loading personal functions
 source $HOME/bin/customFunctions.bash
-#source $HOME/bin/privateFunctions.bash
+
+# Loading git prompt file and enabling some options
+source $HOME/.git-prompt.sh
+
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWCOLORHINTS=1
+
 # Custom command prompt line
-PS1='\n\[\e[0;37m\]\u\[\e[0m\]@\h: \[\e[0;31m\]\w\n\[\e[0m\] -> '
+PS1='\n\[\e[0;37m\]\u\[\e[0m\]@\h: \[\e[0;31m\]\w\n\[\e[0m\]$(__git_ps1 " (%s)") -> '
 
 # Boxen config
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
