@@ -20,6 +20,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'mhinz/vim-startify'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
