@@ -7,7 +7,7 @@ alias grep='grep --color=auto'
 alias ip="system_profiler SPNetworkDataType | grep 'IPv4 Addresses'"
 
 shopt -s extglob
-export JAVA_HOME=`/usr/libexec/java_home -v1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v1.8`
 export PATH=/bin:/usr/local/bin:/usr/bin/ruby:$PATH:$JAVA_HOME:$HOME/bin
 
 # Loading personal functions
