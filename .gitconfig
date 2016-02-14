@@ -14,6 +14,7 @@
 [alias]
   a = !git add -A . && git status
 	am = git commit --amend
+	boom = !git reset --hard && git clean -df
   br = branch
   cm = commit -m
   co = checkout
