@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -30,9 +30,9 @@ filetype plugin indent on
 
 "Only apply the following settings if soloarized theme is present
 if isdirectory($HOME."/.vim/bundle/vim-colors-solarized")
-  let g:solarized_termtrans = 1
+  syntax on
+  set t_Co=16
 
-  syntax enable
   colorscheme solarized
   set background=dark
 endif

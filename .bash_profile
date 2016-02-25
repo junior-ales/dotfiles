@@ -1,11 +1,3 @@
-# Aliases
-alias ls='ls -G'
-alias lt='tree -C'
-alias ll='ls -lh'
-alias la='ll -a'
-alias grep='grep --color=auto'
-alias ip="system_profiler SPNetworkDataType | grep 'IPv4 Addresses'"
-
 shopt -s extglob
 export JAVA_HOME=`/usr/libexec/java_home -v1.8`
 export PATH=/bin:/usr/local/bin:/usr/bin/ruby:$PATH:$JAVA_HOME:$HOME/bin
