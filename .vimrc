@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
@@ -28,16 +27,9 @@ runtime macros/matchit.vim
 call vundle#end()
 filetype plugin indent on
 
-"Only apply the following settings if soloarized theme is present
-if isdirectory($HOME."/.vim/bundle/vim-colors-solarized")
-  syntax on
-  set t_Co=16
-
-  colorscheme solarized
-  set background=dark
-endif
-
 "Personal config
+color distinguished
+
 set list
 set listchars=trail:·
 set cursorline
@@ -59,8 +51,22 @@ set smartcase
 "set spell
 set timeoutlen=1000 ttimeoutlen=0
 set nowrap
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" " use bar for cursor in insert mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7" "
+
+" changes the cursor in insert mode | mac only
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" changes the cursor in insert mode | ubuntu
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+        \ if v:insertmode == 'i' |
+        \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+        \ elseif v:insertmode == 'r' |
+        \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+        \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
 "Personal Mapping
 nmap <Left> :bprevious<CR>
@@ -106,5 +112,8 @@ let g:bufferline_rotate = 1
 let g:bufferline_fixed_index = -1 "always last
 
 "Ctrl-P config
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*/out/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+"Boot config
+au BufRead,BufNewFile *.boot set filetype=clojure
