@@ -19,7 +19,7 @@
   cm = commit -m
   co = checkout
   d = diff
-  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --branches
+  l = log --graph --pretty=format:'%C(yellow)%h%C(red)%d%Creset %s %C(white)- %an, %ar%Creset' --branches
   pr = pull --rebase
   s = status
   spr = !git stash && git pr && git stash pop
