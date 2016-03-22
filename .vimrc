@@ -42,8 +42,7 @@ set shiftwidth=2
 set expandtab
 set wildmenu
 set wildmode=full
-set wildignore+=*.zip,*.gz,*.bz,*.tar
-set wildignore+=*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov
+set wildignore+=*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.zip,*.gz,*.bz,*.tar
 set history=200
 set pastetoggle=<f5>
 set hidden
@@ -112,7 +111,7 @@ let g:bufferline_rotate = 1
 let g:bufferline_fixed_index = -1 "always last
 
 "Ctrl-P config
-set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*/out/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*/out/*,*.so,*.swp
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Boot config
