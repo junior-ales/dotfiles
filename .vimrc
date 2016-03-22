@@ -116,3 +116,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Boot config
 au BufRead,BufNewFile *.boot set filetype=clojure
+
+" Moving temp files away (NOTE: the dir '.vim-tmp' needs to be created)
+set backup
+set swapfile
+set backupdir=~/.vim-tmp
+set directory=~/.vim-tmp
