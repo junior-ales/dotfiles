@@ -72,6 +72,7 @@ nmap <Left> :bprevious<CR>
 nmap <Right> :bnext<CR>
 nmap <Up> :bfirst<CR>
 nmap <Down> :blast<CR>
+nmap <Space><Tab> <C-^>
 
 " Moves selected lines up and down with <c-{j,k}>
 " '> is the last line of the visual selection
