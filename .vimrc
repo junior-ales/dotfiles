@@ -20,6 +20,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'mhinz/vim-startify'
+Plugin 'altercation/vim-colors-solarized'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -28,7 +29,18 @@ call vundle#end()
 filetype plugin indent on
 
 "Personal config
-color distinguished
+
+"Only apply the following settings if using SOLARIZED theme
+if isdirectory($HOME."/.vim/bundle/vim-colors-solarized")
+  syntax on
+  set t_Co=16
+
+  colorscheme solarized
+  set background=dark
+endif
+
+" Only apply the following settings if using DISTINGUISHED theme
+" colorscheme distinguished
 
 set list
 set listchars=trail:·
@@ -42,7 +54,7 @@ set shiftwidth=2
 set expandtab
 set wildmenu
 set wildmode=full
-set wildignore+=*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.zip,*.gz,*.bz,*.tar
+set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*/out/*,*.so,*.swp,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.zip,*.gz,*.bz,*.tar
 set history=200
 set pastetoggle=<f5>
 set hidden
@@ -56,16 +68,16 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " changes the cursor in insert mode | ubuntu
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-        \ if v:insertmode == 'i' |
-        \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-        \ elseif v:insertmode == 'r' |
-        \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-        \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+" if has("autocmd")
+"   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+"   au InsertEnter,InsertChange *
+"         \ if v:insertmode == 'i' |
+"         \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+"         \ elseif v:insertmode == 'r' |
+"         \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+"         \ endif
+"   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+" endif
 
 "Personal Mapping
 nmap <Left> :bprevious<CR>
@@ -112,14 +124,13 @@ let g:bufferline_rotate = 1
 let g:bufferline_fixed_index = -1 "always last
 
 "Ctrl-P config
-set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*/out/*,*.so,*.swp
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Boot config
 au BufRead,BufNewFile *.boot set filetype=clojure
 
 " Moving temp files away (NOTE: the dir '.vim-tmp' needs to be created)
-set backup
-set swapfile
-set backupdir=~/.vim-tmp
-set directory=~/.vim-tmp
+" set backup
+" set swapfile
+" set backupdir=~/.vim-tmp
+" set directory=~/.vim-tmp
