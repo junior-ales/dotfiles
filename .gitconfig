@@ -13,20 +13,21 @@
   editor = vim
 [alias]
   a = !git add -A . && git status
-	am = git commit --amend
-	boom = !git reset --hard && git clean -df
+  boom = !git reset --hard && git clean -df
   br = branch
   cm = commit -m
   co = checkout
+  com = commit --amend --no-edit
   d = diff
+  dh = diff HEAD
   l = log --graph --pretty=format:'%C(yellow)%h%C(red)%d%Creset %s %C(white)- %an, %ar%Creset' --branches
   pr = pull --rebase
   s = status
   spr = !git stash && git pr && git stash pop
+  spu = !git stash && git push origin master && git stash pop
 [push]
   default = tracking
 [merge]
   stat = true
-
 [hub]
-protocol = https
+  protocol = https
