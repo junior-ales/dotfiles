@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -14,13 +13,20 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/ctrlp.vim'
-Plugin 'mxw/vim-jsx'
 Plugin 'mhinz/vim-startify'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ervandew/supertab'
+
+"JavaScript
+Plugin '1995eaton/vim-better-javascript-completion'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'mxw/vim-jsx'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -134,3 +140,39 @@ au BufRead,BufNewFile *.boot set filetype=clojure
 " set swapfile
 " set backupdir=~/.vim-tmp
 " set directory=~/.vim-tmp
+
+" JS Libs
+let g:used_javascript_libs = 'react,jasmine,chai,ramda'
+
+" Startify config
+let g:startify_bookmarks = [
+      \ '~/Projects/dotfiles/.vimrc',
+      \ '~/Projects/exercism/ecmascript/.eslintrc',
+      \ '~/Projects/junior-ales.github.io/cover-page/build.boot',
+      \ ]
+
+" Supertab
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<c-n>'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
