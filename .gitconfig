@@ -22,12 +22,17 @@
   dh = diff HEAD
   l = log --graph --pretty=format:'%C(yellow)%h%C(red)%d%Creset %s %C(white)- %an, %ar%Creset' --branches
   pr = pull --rebase
+  prune = fetch --prune
   s = status
   spr = !git stash && git pr && git stash pop
   spu = !git stash && git push origin master && git stash pop
+  undo = reset --soft HEAD^
 [push]
-  default = tracking
+  default = simple
+  followTags = true
 [merge]
   stat = true
 [hub]
   protocol = https
+[status]
+  showUntrackedFiles = all
