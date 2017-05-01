@@ -151,6 +151,14 @@ let g:startify_bookmarks = [
       \ '~/Projects/junior-ales.github.io/cover-page/build.boot',
       \ ]
 
+" JS related files
+au BufRead,BufNewFile .eslintrc set filetype=json
+au BufRead,BufNewFile .babelrc set filetype=json
+au BufRead,BufNewFile *.marko set filetype=javascript
+
+" Jenkins file
+au BufRead,BufNewFile Jenkinsfile* set filetype=groovy
+
 " Supertab
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
