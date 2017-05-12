@@ -148,6 +148,7 @@ let g:used_javascript_libs = 'react,jasmine,chai,ramda,jest'
 autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100
 
 " Startify config
+let g:startify_change_to_vcs_root = 1
 let g:startify_bookmarks = [
       \ '~/Projects/dotfiles/.vimrc',
       \ '~/Projects/exercism/ecmascript/.eslintrc',
