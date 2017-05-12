@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'rodjek/vim-puppet'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'editorconfig/editorconfig-vim'
@@ -17,6 +16,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ervandew/supertab'
+Plugin 'airblade/vim-gitgutter'
 
 "JavaScript
 Plugin '1995eaton/vim-better-javascript-completion'
@@ -142,7 +142,10 @@ au BufRead,BufNewFile *.boot set filetype=clojure
 " set directory=~/.vim-tmp
 
 " JS Libs
-let g:used_javascript_libs = 'react,jasmine,chai,ramda'
+let g:used_javascript_libs = 'react,jasmine,chai,ramda,jest'
+
+" Prettier config
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100
 
 " Startify config
 let g:startify_bookmarks = [
