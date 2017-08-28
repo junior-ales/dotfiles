@@ -17,6 +17,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/AutoClose'
 
 "JavaScript
 Plugin '1995eaton/vim-better-javascript-completion'
