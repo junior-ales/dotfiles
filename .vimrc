@@ -91,7 +91,7 @@ nmap <Left> :bprevious<CR>
 nmap <Right> :bnext<CR>
 nmap <Up> :bfirst<CR>
 nmap <Down> :blast<CR>
-nmap <Space><Tab> <C-^>
+nnoremap <Space><Tab> <C-^>
 
 " Moves selected lines up and down with <c-{j,k}>
 " '> is the last line of the visual selection
@@ -103,6 +103,7 @@ nnoremap <CR> :nohlsearch<cr>
 
 "NERDTree config
 map <F9> :NERDTreeToggle<CR>
+map <F8> :NERDTreeFind<CR>
 
 "GUndo.vim config
 nnoremap <F4> :GundoToggle<CR>
