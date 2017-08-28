@@ -28,6 +28,7 @@ Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'mitermayer/vim-prettier'
 
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
@@ -147,7 +148,12 @@ au BufRead,BufNewFile *.boot set filetype=clojure
 let g:used_javascript_libs = 'react,jasmine,chai,ramda,jest'
 
 " Prettier config
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100
+let g:prettier#autoformat = 0
+let g:prettier#quickfix_enabled = 0
+let g:prettier#config#print_width = 100
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#bracket_spacing = 'true'
+"autocmd BufWritePre *.js,*.json PrettierAsync
 
 " Startify config
 let g:startify_change_to_vcs_root = 1
