@@ -30,6 +30,12 @@ Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'mitermayer/vim-prettier'
 
+"Typescript
+Plugin 'Quramy/tsuquyomi'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'jason0x43/vim-js-indent'
+
 "Built-in plugin to enable % to match delimiters
 runtime macros/matchit.vim
 
@@ -173,12 +179,18 @@ au BufRead,BufNewFile Jenkinsfile* set filetype=groovy
 
 " Supertab
 let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = '<c-n>'
+let g:SuperTabContextDefaultCompletionType = '<C-x><C-o>'
+
+" Typescript
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_completion_detail = 1
 
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
